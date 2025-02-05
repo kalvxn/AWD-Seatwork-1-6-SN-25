@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+body {
+    font-family: "Jersey 15", sans-serif;
+    color: var(--color-primary-1);
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: auto;
+    position: relative;
+}
+
+.header1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(75deg, #ff78e8 0%, #570044 100%);
+    padding: 0.7rem 10vw;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 0.9;
+}
+
+.header1 .company-logo {
+    height: 50px;
+    margin-left: 1rem;
+    transition: 1s;
+}
+
+.header1 .company-logo:hover {
+    transform: rotateZ(720deg);
+}
+
+.header1 a.navigation-content {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all .5s;
+}
+
+.header1 a.navigation-content:hover {
+    background-color: #DE3163;
+    color: white;
+    box-shadow: 22px 10px 5px 6px rgba(0, 0, 0, 0.73);
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+.records-container {
+    text-align: center;
+    margin-top: 8rem;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.records-container h1 {
+    font-family: "Jersey 15", sans-serif;
+    font-size: 2.5rem;
+    color: #ff78e8;
+    margin-bottom: 1.5rem;
+}
+
+.records-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.records-table th,
+.records-table td {
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #DE3163;
+    color: white;
+}
+
+.records-table th {
+    background: linear-gradient(75deg, #F48FB1 0%, #FFD8DB 100%);
+    color: black;
+    font-weight: bold;
+}
+
+.records-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.records-table tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.1);
+}
