@@ -4,25 +4,25 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
+  <a href="https://github.com/kalvxn/">
   <!-- TODO: If you want to add logo or banner you can add it here -->
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+    <img src="./assets/img/logo.png" alt="logo" width="130" height="100">
   </a>
 <!-- TODO: Change Title to the name of the title of your Project -->
-  <h3 align="center">Title</h3>
+  <h3 align="center">AWD-Seatwork-1-6-SN-25</h3>
 </div>
 <!-- TODO: Make a short description -->
 <div align="center">
-  Short Description. (Optional)
+  This is a website that calculates the GWA using 4.0 scale system. A showcase of grade-computation website.
 </div>
 
 <br />
 
 <!-- TODO: Change the zyx-0314 into your github username  -->
 <!-- TODO: Change the WD-Template-Project into the same name of your folder -->
-![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/WD-Template-Project)
+![](https://visit-counter.vercel.app/counter.png?page=kalvxn/AWD-Seatwork-1-6-SN-25)
 
-[![wakatime](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8.svg)](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8)
+[![wakatime](https://wakatime.com/badge/user/c86f5932-addc-451a-8d0c-9a8089521a5e/project/9490ed61-d663-4f8c-a8f3-b62ac3eb6962.svg)](https://wakatime.com/badge/user/c86f5932-addc-451a-8d0c-9a8089521a5e/project/9490ed61-d663-4f8c-a8f3-b62ac3eb6962)
 
 ---
 
@@ -62,15 +62,13 @@
 Description of the project in details.
 
 Guiding Question:
-- What is the project
-- Whats the purpose
-- What are key components
-- What technology used and how it is used
+- A website that calculates the GWA using 4.0 scale system.
+- To help school body in calculating GPA.
 
 ### Key Components
 <!-- TODO: List of Key Components -->
 <!-- The following are just sample -->
-- MultiPage Website/Single Page Website
+- MultiPage Website
 - Parallax transition
 - Transactional
 
@@ -92,23 +90,29 @@ Guiding Question:
 7. File Structure to follow below.
 
 ```
-WD-ProjectName
+AWD-Seatwork-1-6-SN-25
 └─ assets
 |   └─ css
 |   |   └─ style.css
 |   └─ img
-|   |   └─ fileWith.jpeg/.jpg/.webp/.png
+|   |   └─ ghost.png
+|   |   └─ logo.png
 |   └─ js
-|       └─ script.js
+|   |   └─ script.js
+|   └─ vids
+|   |   └─ screen.mp4
 └─ pages
-|  └─ pageName
+|  └─ RECORDS
 |     └─ assets
 |     |  └─ css
 |     |  |  └─ style.css
 |     |  └─ img
-|     |  |  └─ fileWith.jpeg/.jpg/.webp/.png
+|     |  |  └─ ghost.png
+|     |  |  └─ logo.png
 |     |  └─ js
 |     |     └─ script.js
+|     |  └─ vids
+|     |     └─ screen.mp4
 |     └─ index.html
 └─ index.html
 └─ readme.md
@@ -119,4 +123,6 @@ WD-ProjectName
 <!-- TODO: Add References -->
 | Title | Purpose | Link |
 |-|-|-|
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
+| Google | I used this for images. | google.com |
+| Google Fonts | Used for Fonts. | fonts.google.com |
+| Youtube | For the BG video. | https://www.youtube.com/ |
