@@ -30,12 +30,21 @@
             <h2>Enter Your Grades</h2>
             <input type="text" id="student-name" placeholder="Enter your name">
             <div id="grade-inputs">
-                <input type="number" class="gwa-input" placeholder="Grade 1">
-                <input type="number" class="gwa-input" placeholder="Grade 2">
-                <input type="number" class="gwa-input" placeholder="Grade 3">
-                <input type="number" class="gwa-input" placeholder="Grade 4">
-                <input type="number" class="gwa-input" placeholder="Grade 5">
+                <div class="course-input">
+                    <input type="number" class="gwa-input grade" placeholder="Grade 1">
+                    <input type="number" class="gwa-input unit" placeholder="Units 1">
+                </div>
+                <div class="course-input">
+                    <input type="number" class="gwa-input grade" placeholder="Grade 2">
+                    <input type="number" class="gwa-input unit" placeholder="Units 2">
+                </div>
+                <div class="course-input">
+                    <input type="number" class="gwa-input grade" placeholder="Grade 3">
+                    <input type="number" class="gwa-input unit" placeholder="Units 3">
+                </div>
             </div>
+            <button class="gwa-button" id="add-course-btn" onclick="addCourse()">Add Course</button>
+            <button class="gwa-button" id="remove-course-btn" onclick="removeCourse()">Remove Course</button>
             <button class="gwa-submit" onclick="calculateGWA()">Submit</button>
         </div>
     </div>

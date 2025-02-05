@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
 
-body {
+* {
     font-family: "Jersey 15", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
     color: var(--color-primary-1);
     background: black;
     display: flex;
@@ -21,7 +25,6 @@ body {
     background: linear-gradient(75deg, #ff78e8 0%, #570044 100%);
     padding: 0.7rem 10vw;
     width: 100%;
-    box-sizing: border-box;
     opacity: 0.9;
 }
 
@@ -70,8 +73,7 @@ body {
 }
 
 .gwa-button {
-    font-family: "Jersey 15", sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     padding: 30px 60px;
     background: linear-gradient(75deg, #F48FB1 0%, #FFD8DB 100%);
@@ -80,12 +82,6 @@ body {
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-}
-
-.gwa-button:hover {
-    background: #DE3163;
-    color: white;
-    box-shadow: 0 0 20px #DE3163;
 }
 
 .gwa-popup {
@@ -102,48 +98,32 @@ body {
 
 .gwa-popup-content {
     background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
     text-align: center;
-    width: 450px;
+    width: 1000px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.gwa-popup h2 {
-    margin-bottom: 20px;
-    font-family: "Jersey 15", sans-serif;
-    color: #570044;
+.course-input {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .gwa-input {
+    width: 48%;
     font-size: 1.5rem;
     padding: 12px;
-    width: 100%;
     border: 2px solid #DE3163;
     border-radius: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     background: rgba(255, 255, 255, 0.6);
 }
 
-.gwa-submit {
-    font-size: 1.5rem;
-    padding: 12px 25px;
-    background: #DE3163;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: all 0.3s ease-in-out;
-}
-
-.gwa-submit:hover {
-    background: #ff4081;
-}
-
-.close-btn {
-    font-size: 2rem;
-    color: red;
-    cursor: pointer;
-    float: right;
+.gwa-popup-content,
+.gwa-input,
+.gwa-button,
+.header1 a.navigation-content {
+    font-family: "Jersey 15", sans-serif;
 }
