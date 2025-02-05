@@ -71,3 +71,5 @@ function calculateGWA() {
     alert(`${name}, your GWA is: ${gwa.toFixed(2)}`);
     closeGWAForm();
 }
+
+
