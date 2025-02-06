@@ -61,7 +61,6 @@
 <!-- The following are just sample -->
 Description of the project in details.
 
-Guiding Question:
 - A website that calculates the GWA using 4.0 scale system.
 - To help school body in calculating GPA.
 
@@ -123,6 +122,6 @@ AWD-Seatwork-1-6-SN-25
 <!-- TODO: Add References -->
 | Title | Purpose | Link |
 |-|-|-|
-| Google | I used this for images. | google.com |
-| Google Fonts | Used for Fonts. | fonts.google.com |
+| Google | I used this for images. | https://www.google.com/ |
+| Google Fonts | Used for Fonts. | https://fonts.google.com/ |
 | Youtube | For the BG video. | https://www.youtube.com/ |
