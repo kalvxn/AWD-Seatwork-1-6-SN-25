@@ -12,8 +12,8 @@ function addCourse() {
         let newCourse = document.createElement("div");
         newCourse.classList.add("course-input");
         newCourse.innerHTML = `
-            <input type="number" class="gwa-input grade" placeholder="Grade ${courseInputs.length + 1}">
-            <input type="number" class="gwa-input unit" placeholder="Units ${courseInputs.length + 1}">
+            <input type="number" class="gwa-input grade" placeholder="Input 4-POINT GRADE">
+            <input type="number" class="gwa-input unit" placeholder="Input number of Units">
         `;
         document.getElementById("grade-inputs").appendChild(newCourse);
     }

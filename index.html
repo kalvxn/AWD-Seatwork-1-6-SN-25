@@ -27,26 +27,101 @@
     <div id="gwa-popup" class="gwa-popup">
         <div class="gwa-popup-content">
             <span class="close-btn" onclick="closeGWAForm()">&times;</span>
-            <h2>Enter Your Grades</h2>
+            <h2>Enter Your Grades (4-Point)</h2>
             <input type="text" id="student-name" placeholder="Enter your name">
             <div id="grade-inputs">
                 <div class="course-input">
-                    <input type="number" class="gwa-input grade" placeholder="Grade 1">
-                    <input type="number" class="gwa-input unit" placeholder="Units 1">
+                    <input type="number" class="gwa-input grade" placeholder="Input 4-POINT GRADE">
+                    <input type="number" class="gwa-input unit" placeholder="Input number of Units">
                 </div>
                 <div class="course-input">
-                    <input type="number" class="gwa-input grade" placeholder="Grade 2">
-                    <input type="number" class="gwa-input unit" placeholder="Units 2">
+                    <input type="number" class="gwa-input grade" placeholder="Input 4-POINT GRADE">
+                    <input type="number" class="gwa-input unit" placeholder="Input number of Units">
                 </div>
                 <div class="course-input">
-                    <input type="number" class="gwa-input grade" placeholder="Grade 3">
-                    <input type="number" class="gwa-input unit" placeholder="Units 3">
+                    <input type="number" class="gwa-input grade" placeholder="Input 4-POINT GRADE">
+                    <input type="number" class="gwa-input unit" placeholder="Input number of Units">
                 </div>
             </div>
-            <button class="gwa-button" id="add-course-btn" onclick="addCourse()">Add Course</button>
-            <button class="gwa-button" id="remove-course-btn" onclick="removeCourse()">Remove Course</button>
+            <button class="gwa-Row" id="add-course-btn" onclick="addCourse()">Add Row</button>
+            <button class="gwa-Row" id="remove-course-btn" onclick="removeCourse()">Remove Row</button>
             <button class="gwa-submit" onclick="calculateGWA()">Submit</button>
         </div>
     </div>
+    <script>
+        function openGWAForm() {
+            document.getElementById("gwa-popup").style.display = "flex";
+        }
+
+        function closeGWAForm() {
+            document.getElementById("gwa-popup").style.display = "none";
+        }
+
+        function addCourse() {
+            let courseInputs = document.querySelectorAll(".course-input");
+            if (courseInputs.length < 10) {
+                let newCourse = document.createElement("div");
+                newCourse.classList.add("course-input");
+                newCourse.innerHTML = `
+                    <input type="number" class="gwa-input grade" placeholder="Input 4-POINT GRADE">
+                    <input type="number" class="gwa-input unit" placeholder="Input number of Units">
+                `;
+                document.getElementById("grade-inputs").appendChild(newCourse);
+            }
+        }
+
+        function removeCourse() {
+            let courseInputs = document.querySelectorAll(".course-input");
+            if (courseInputs.length > 3) {
+                courseInputs[courseInputs.length - 1].remove();
+            }
+        }
+
+        function calculateGWA() {
+            let name = document.getElementById("student-name").value.trim();
+            if (!name) {
+                alert("Please enter your name.");
+                return;
+            }
+
+            let grades = document.querySelectorAll(".gwa-input.grade");
+            let units = document.querySelectorAll(".gwa-input.unit");
+
+            let totalWeightedGrade = 0;
+            let totalUnits = 0;
+
+            for (let i = 0; i < grades.length; i++) {
+                let grade = parseFloat(grades[i].value);
+                let unit = parseFloat(units[i].value);
+
+                if (isNaN(grade) || grade < 0.0 || grade > 4.0) {
+                    alert("Invalid grade entered. Please enter a number between 0.0 and 4.0.");
+                    return;
+                }
+
+                if (isNaN(unit) || unit <= 0) {
+                    alert("Invalid units entered. Please enter a positive number.");
+                    return;
+                }
+
+                totalWeightedGrade += grade * unit;
+                totalUnits += unit;
+            }
+
+            if (totalUnits === 0) {
+                alert("Total units cannot be zero.");
+                return;
+            }
+
+            let gwa = totalWeightedGrade / totalUnits;
+
+            const storedRecords = JSON.parse(localStorage.getItem("gwaRecords")) || [];
+            storedRecords.push({ name, gwa });
+            localStorage.setItem("gwaRecords", JSON.stringify(storedRecords));
+
+            alert(`${name}, your GWA is: ${gwa.toFixed(2)}`);
+            closeGWAForm();
+        }
+    </script>
 </body>
 </html>
